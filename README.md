@@ -30,6 +30,7 @@ var excitedly = compose(
 
 excitedly(someIO('this is a value'))(function (err, val) {
     console.log(err, val)
+    // null 'this is a value!!! wooo'
 })
 
 function someIO (data, cb) {
