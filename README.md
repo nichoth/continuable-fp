@@ -1,6 +1,6 @@
 # continuable fp
 
-[Continuable](https://github.com/Raynos/continuable) operators, but with the arguments flipped so they compose better.
+[Continuable](https://github.com/Raynos/continuable) operators, but with the arguments flipped so they compose better, and also they curry automatically.
 
 This is a fun way to play with IO and functional patterns.
 
