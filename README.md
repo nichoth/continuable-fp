@@ -1,6 +1,8 @@
 # continuable fp
 
-Continuable operators, but with the arguments flipped so they compose better. 
+Continuable operators, but with the arguments flipped so they compose better.
+
+This is a fun way to play with IO and functional patterns.
 
 ## example
 
