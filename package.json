@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "compose-function": "^3.0.3",
+    "lodash.compose": "^2.4.1"
+  },
+  "name": "continuable-fp",
+  "description": "Continuable operators, but with the arguments flipped so they compose better.",
+  "version": "0.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichoth/continuable-fp.git"
+  },
+  "author": "nichoth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichoth/continuable-fp/issues"
+  },
+  "homepage": "https://github.com/nichoth/continuable-fp#readme"
+}
