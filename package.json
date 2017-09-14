@@ -1,13 +1,14 @@
 {
-  "devDependencies": {
-    "compose-function": "^3.0.3"
-  },
   "name": "continuable-fp",
   "description": "Continuable operators, but with the arguments flipped so they compose better.",
   "version": "0.0.0",
   "main": "index.js",
   "dependencies": {},
+  "devDependencies": {
+    "compose-function": "^3.0.3"
+  },
   "scripts": {
+    "post-version": "npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/nichoth/continuable-fp/issues"
   },
-  "homepage": "https://github.com/nichoth/continuable-fp#readme"
+  "homepage": "https://github.com/nichoth/continuable-fp#readme",
+  "keywords": [
+    "continuable",
+    "async",
+    "functional",
+    "callback"
+  ]
 }
