@@ -1,4 +1,4 @@
-module.exports = {
+var continuable = {
     // take a nested continuable and return the inner one
     join: function join (con) {
         return function (cb) {
@@ -41,3 +41,4 @@ module.exports = {
     }
 }
 
+module.exports = continuable
