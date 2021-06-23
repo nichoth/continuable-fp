@@ -4,6 +4,11 @@
 
 This is a fun way to play with IO and functional patterns.
 
+## install
+```
+npm i -S continuable-fp
+```
+
 ## example
 
 ```js
@@ -53,6 +58,11 @@ function ioError (data, cb) {
 ```
 
 You can use typescript too
+
+```
+npm install -g typescript
+tsc ts-example.ts
+```
 
 ```typescript
 import c = require('continuable-fp')

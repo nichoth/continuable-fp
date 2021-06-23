@@ -4,10 +4,9 @@
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
-  "dependencies": {},
   "devDependencies": {
     "compose-function": "^3.0.3",
-    "typescript": "^2.5.2"
+    "typescript": "^2.9.2"
   },
   "scripts": {
     "post-version": "npm publish",
