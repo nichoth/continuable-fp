@@ -91,7 +91,7 @@ either (left, right, con) {
 ```
 
 ### of
-Take a value, and create a continuable the will return it
+Take a value, and create a continuable that will return it
 
 
 
