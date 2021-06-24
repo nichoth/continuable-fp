@@ -74,3 +74,26 @@ c.of('hello')(function (err, val) {
     // Property 'thisdoesnotexist' does not exist on type 'string'
 })
 ```
+
+## operators
+
+### join
+Take a nested continuable and return the inner one
+
+### map
+Map a value through a predicate function
+
+### either
+Return the left function if there is an error, right function if there's no error.
+
+```js
+either (left, right, con) {
+```
+
+### of
+Take a value, and create a continuable the will return it
+
+
+
+
+

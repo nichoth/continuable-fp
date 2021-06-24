@@ -9,6 +9,7 @@ var continuable = {
         }
     },
 
+    // return a new continuable of the predicate(value)
     map: function map (fn, con) {
         if (!con) return function (c) {
             return map(fn, c)
