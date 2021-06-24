@@ -1,7 +1,7 @@
 {
   "name": "continuable-fp",
   "description": "Continuable operators, but with the arguments flipped so they compose better.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "types": "index.d.ts",
   "devDependencies": {
