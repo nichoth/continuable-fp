@@ -103,6 +103,12 @@ function ioError (data, cb) {
 }
 ```
 
+```
+$ node err-example.js
+it worked... null ok
+err result... null baaaa
+```
+
 ## typescript
 
 You can use typescript too
