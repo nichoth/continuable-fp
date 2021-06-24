@@ -16,9 +16,14 @@ var compose = require('compose-function')
 var c = require('./')
 
 var excitedly = compose(
+    // remove a level of nesting
     c.join,
     c.map(function (data) {
+        // return a nested continuable
+        // here you can make a call to a new continuable (`someIO` below),
+        // using the data inside this continuable
         return c.either(
+            // call this if `someIO` returns an error
             function onErr (err) {
                 return c.of('booo')
             },
@@ -57,6 +62,49 @@ function ioError (data, cb) {
 }
 ```
 
+## example of errors
+
+```js
+var c = require('./')
+
+var myFn = c.either(
+    function onErr (err) {
+        return c.of('baaaa')
+    },
+    function onData (data) {
+        return c.of('ok')
+    }
+)
+
+myFn(someIO('woooo'))(function (err, done) {
+    console.log('it worked...', err, done)
+})
+
+myFn(ioError('booo'))(function (err, ok) {
+    console.log('err result...', err, ok)
+})
+
+function someIO (data, cb) {
+    if (!cb) return function (_cb) {
+        return someIO(data, _cb)
+    }
+    process.nextTick(function () {
+        cb(null, data)
+    })
+}
+
+function ioError (data, cb) {
+    if (!cb) return function (_cb) {
+        return ioError(data, _cb)
+    }
+    process.nextTick(function () {
+        cb(new Error('rarrr'))
+    })
+}
+```
+
+## typescript
+
 You can use typescript too
 
 ```
@@ -87,7 +135,7 @@ Map a value through a predicate function
 Return the left function if there is an error, right function if there's no error.
 
 ```js
-either (left, right, con) {
+either (left, right, continuable)
 ```
 
 ### of
