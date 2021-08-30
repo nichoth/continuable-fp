@@ -114,7 +114,7 @@ err result... null baaaa
 You can use typescript too
 
 ```
-npx tsc ts-example.ts
+$ npx tsc ts-example.ts
 ts-example.ts:7:9 - error TS2339: Property 'thisdoesnotexist' does not exist on type 'string'.
 
 7     val.thisdoesnotexist()
