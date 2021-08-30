@@ -25,4 +25,3 @@ export function either<A, B> (
     source: Continuable<A>
 ): Continuable<B>
 
-
