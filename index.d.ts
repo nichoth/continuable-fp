@@ -4,6 +4,8 @@
 // export function myMethod(a: string): string;
 // export function myOtherMethod(a: number): number;
 
+/// <reference types="typescript" />
+
 export interface Continuable<T> {
     (cb: (err: Error, value: T) => void): void
 }

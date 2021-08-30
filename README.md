@@ -69,7 +69,7 @@ var c = require('./')
 
 var myFn = c.either(
     function onErr (err) {
-        return c.of('baaaa')
+        return c.of(err + ' baaaa')
     },
     function onData (data) {
         return c.of('ok')
@@ -78,10 +78,12 @@ var myFn = c.either(
 
 myFn(someIO('woooo'))(function (err, done) {
     console.log('it worked...', err, done)
+    // it worked... null ok
 })
 
 myFn(ioError('booo'))(function (err, ok) {
     console.log('err result...', err, ok)
+    // err result... null Error: booo baaaa
 })
 
 function someIO (data, cb) {
@@ -98,7 +100,7 @@ function ioError (data, cb) {
         return ioError(data, _cb)
     }
     process.nextTick(function () {
-        cb(new Error('rarrr'))
+        cb(new Error('' + data))
     })
 }
 ```
@@ -106,7 +108,7 @@ function ioError (data, cb) {
 ```
 $ node err-example.js
 it worked... null ok
-err result... null baaaa
+err result... null Error: booo baaaa
 ```
 
 ## typescript
