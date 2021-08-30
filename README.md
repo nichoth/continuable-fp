@@ -114,8 +114,7 @@ err result... null baaaa
 You can use typescript too
 
 ```
-npm install -g typescript
-tsc ts-example.ts
+npx tsc ts-example.ts
 ```
 
 ```typescript
